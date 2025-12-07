@@ -44,6 +44,14 @@
   max-width: min(400px, 90vw);
 }
 
+.about-right-mobile {
+  display: none;
+}
+
+.about-right-desktop {
+  display: flex;
+}
+
 /* Tablet and below */
 @media (max-width: 1024px) {
   .about-content {
@@ -54,12 +62,15 @@
   .about-left {
     width: 100%;
     text-align: center;
-    order: 2;
   }
 
-  .about-right {
+  .about-right-mobile {
+    display: flex;
     max-width: min(350px, 85vw);
-    order: 1;
+  }
+
+  .about-right-desktop {
+    display: none;
   }
 }
 
@@ -67,22 +78,32 @@
 @media (max-width: 768px) {
   .about-container {
     padding: clamp(1rem, 3vw, 1.5rem);
-    min-height: auto;
-    align-items: flex-start;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
     padding-top: clamp(1.5rem, 4vw, 2rem);
     padding-bottom: 6rem; /* Space for fixed Spotify pill */
   }
 
   .about-content {
-    gap: clamp(1.5rem, 3vw, 2rem);
+    gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  }
+
+  .about-left {
+    align-items: center;
+  }
+
+  .about-description {
+    max-width: 480px;
   }
 
   .about-description p {
     line-height: 1.6;
   }
 
-  .about-right {
-    max-width: min(320px, 80vw);
+  .about-right,
+  .about-right-mobile {
+    max-width: min(280px, 75vw);
   }
 }
 
@@ -93,15 +114,20 @@
   }
 
   .about-content {
-    gap: clamp(1.5rem, 3vw, 2rem);
+    gap: clamp(1.1rem, 2.2vw, 1.6rem);
   }
 
   .about-left {
-    gap: clamp(1rem, 2.5vw, 1.5rem);
+    gap: clamp(0.9rem, 2vw, 1.3rem);
   }
 
-  .about-right {
-    max-width: min(280px, 75vw);
+  .about-description {
+    max-width: 420px;
+  }
+
+  .about-right,
+  .about-right-mobile {
+    max-width: min(260px, 72vw);
   }
 }
 
@@ -113,11 +139,12 @@
   }
 
   .about-content {
-    gap: clamp(1rem, 2.5vw, 1.5rem);
+    gap: clamp(0.9rem, 2vw, 1.3rem);
   }
 
-  .about-right {
-    max-width: min(240px, 70vw);
+  .about-right,
+  .about-right-mobile {
+    max-width: min(230px, 68vw);
   }
 }
 

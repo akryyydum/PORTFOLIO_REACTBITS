@@ -112,7 +112,7 @@ export default class Home extends Component {
         <div className="horizontal-scroll-wrapper" ref={this.scrollWrapperRef}>
           <div className="horizontal-scroll-container">
             <section className="scroll-section">
-              <Hero key={`hero-${currentSection === 0}`} />
+              <Hero key={`hero-${currentSection === 0}`} showSpotify={currentSection === 0} />
             </section>
             <section className="scroll-section">
               <About key={`about-${currentSection === 1}`} />

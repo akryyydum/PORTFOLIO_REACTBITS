@@ -7,23 +7,9 @@ const handleAnimationComplete = () => {
   console.log('All letters have animated!');
 };
 export default class Hero extends Component {
-  componentDidMount() {
-    // Show Spotify pill only when Hero is mounted
-    const spotifyContainer = document.querySelector('.hero-section .spotify-container');
-    if (spotifyContainer) {
-      spotifyContainer.style.display = 'block';
-    }
-  }
-
-  componentWillUnmount() {
-    // Hide Spotify pill when leaving Hero section
-    const spotifyContainer = document.querySelector('.hero-section .spotify-container');
-    if (spotifyContainer) {
-      spotifyContainer.style.display = 'none';
-    }
-  }
-
   render() {
+    const { showSpotify = true } = this.props;
+    
     return (
       <div className="hero-section">
         <SplitText
@@ -52,9 +38,11 @@ export default class Hero extends Component {
           </button>
         </div>
         
-        <div className="spotify-container">
-          <SpotifyPill />
-        </div>
+        {showSpotify && (
+          <div className="spotify-container">
+            <SpotifyPill />
+          </div>
+        )}
       </div>
     )
   }

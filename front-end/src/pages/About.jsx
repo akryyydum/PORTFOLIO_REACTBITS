@@ -22,6 +22,20 @@ export default class About extends Component {
               triggerOnHover={true}
               respectReducedMotion={true}
             />
+            <div className="about-right about-right-mobile">
+              <ProfileCard
+                name="Lance Andres"
+                title="Web Developer"
+                handle="krystiandres"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl="https://i.ibb.co/j9MhVCSm/473029323-8909794689068234-5708124434895071915-n-removebg-preview.png"
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => console.log('Contact clicked')}
+              />
+            </div>
             <div className="about-description">
               <p>
                 Hi, I'm Lance Andres, a passionate web developer specializing in creating 
@@ -30,7 +44,7 @@ export default class About extends Component {
               </p>
             </div>
           </div>
-          <div className="about-right">
+          <div className="about-right about-right-desktop">
             <ProfileCard
               name="Lance Andres"
               title="Web Developer"
