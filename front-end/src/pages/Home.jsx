@@ -5,15 +5,43 @@ import About from './About';
 import Education from './Education';
 import ColorBlends from '../bg/ColorBlends';
 import './Home.css';
-
+import Achievements from './Achievements';
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.scrollWrapperRef = React.createRef();
     this.state = {
       currentSection: 0,
-      totalSections: 3
+      totalSections:4
     };
+  }
+
+  componentDidMount() {
+    const wrapper = this.scrollWrapperRef.current;
+    if (!wrapper) return;
+
+    const handleScroll = () => {
+      const scrollLeft = wrapper.scrollLeft;
+      const sectionWidth = window.innerWidth;
+      const newSection = Math.round(scrollLeft / sectionWidth);
+      
+      if (newSection !== this.state.currentSection) {
+        this.setState({ currentSection: newSection });
+      }
+    };
+
+    wrapper.addEventListener('scroll', handleScroll);
+    
+    // Cleanup
+    this.scrollCleanup = () => {
+      wrapper.removeEventListener('scroll', handleScroll);
+    };
+  }
+
+  componentWillUnmount() {
+    if (this.scrollCleanup) {
+      this.scrollCleanup();
+    }
   }
 
   scrollToSection = (direction) => {
@@ -83,13 +111,16 @@ export default class Home extends Component {
         <div className="horizontal-scroll-wrapper" ref={this.scrollWrapperRef}>
           <div className="horizontal-scroll-container">
             <section className="scroll-section">
-              <Hero />
+              <Hero key={`hero-${currentSection === 0}`} />
             </section>
             <section className="scroll-section">
-              <About />
+              <About key={`about-${currentSection === 1}`} />
             </section>
             <section className="scroll-section">
-              <Education />
+              <Education key={`education-${currentSection === 2}`} />
+            </section>
+            <section className="scroll-section">
+              <Achievements key={`achievements-${currentSection === 3}`} />
             </section>
           </div>
         </div>

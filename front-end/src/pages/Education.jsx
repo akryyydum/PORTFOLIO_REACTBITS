@@ -14,7 +14,7 @@ const handleAnimationComplete = () => {
     return (
       <div className="education-container">
         <BlurText
-  text="Isn't this so cool?!"
+  text="Education"
   delay={150}
   animateBy="words"
   direction="top"

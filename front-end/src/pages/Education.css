@@ -17,6 +17,28 @@
   font-size: 5rem !important;
 }
 
+@media (max-width: 768px) {
+  .education-blur-text {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-blur-text {
+    font-size: 2.5rem !important;
+  }
+
+  .education-container {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .education-blur-text {
+    font-size: 2rem !important;
+  }
+}
+
 .education-container .scroll-stack-scroller {
   height: 100%;
   width: 100%;
@@ -89,5 +111,60 @@
 
   .education-info p.course {
     font-size: 1.125rem;
+  }
+
+  .education-card-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card-content {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  .education-logo img {
+    width: 80px;
+    height: 80px;
+    padding: 0.75rem;
+  }
+
+  .education-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .education-info p {
+    font-size: 0.9375rem;
+  }
+
+  .education-info p.course {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .education-card-content {
+    gap: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .education-logo img {
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+
+  .education-info h2 {
+    font-size: 1.125rem;
+  }
+
+  .education-info p {
+    font-size: 0.875rem;
+  }
+
+  .education-info p.course {
+    font-size: 0.9375rem;
   }
 }
