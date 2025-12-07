@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SplitText from "./SplitText";
+import SpotifyPill from '../components/ui/SpotifyPill';
 import './Hero.css';
 
 const handleAnimationComplete = () => {
@@ -33,6 +34,10 @@ export default class Hero extends Component {
               </svg>
             </span>
           </button>
+        </div>
+        
+        <div className="spotify-container">
+          <SpotifyPill />
         </div>
       </div>
     )

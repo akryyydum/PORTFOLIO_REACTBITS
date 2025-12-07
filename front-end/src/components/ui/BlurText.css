@@ -5,6 +5,10 @@ p {
   font-size: 5rem;
 }
 
+.blur-text-small p {
+  font-size: 3rem !important;
+}
+
 .inline-block {
   display: inline-block;
   color: white;

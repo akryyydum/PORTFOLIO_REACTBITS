@@ -6,13 +6,14 @@ import Education from './Education';
 import ColorBlends from '../bg/ColorBlends';
 import './Home.css';
 import Achievements from './Achievements';
+import Projects from './Projects';
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.scrollWrapperRef = React.createRef();
     this.state = {
       currentSection: 0,
-      totalSections:4
+      totalSections:5
     };
   }
 
@@ -121,6 +122,9 @@ export default class Home extends Component {
             </section>
             <section className="scroll-section">
               <Achievements key={`achievements-${currentSection === 3}`} />
+            </section>
+            <section className="scroll-section">
+              <Projects key={`projects-${currentSection === 4}`} />
             </section>
           </div>
         </div>

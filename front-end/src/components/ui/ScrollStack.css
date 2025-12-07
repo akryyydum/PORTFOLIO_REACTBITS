@@ -82,12 +82,7 @@
 
 @media (max-width: 768px) {
   .scroll-stack-scroller {
-    height: auto;
-    overflow: visible;
-  }
-
-  .scroll-stack-inner {
-    padding: 5vh 2rem 5vh;
+    height: 70%;
   }
 
   .scroll-stack-card {
@@ -95,9 +90,10 @@
     height: auto;
     min-height: 18rem;
     padding: 2rem;
-    margin: 20px 0;
-    transform: none !important;
-    filter: none !important;
+  }
+
+  .scroll-stack-inner {
+    padding: 10vh 2rem 40rem;
   }
 
   .scroll-stack-card h2 {
@@ -111,21 +107,18 @@
 
 @media (max-width: 480px) {
   .scroll-stack-scroller {
-    height: auto;
-    overflow: visible;
+    height: 60%;
   }
 
   .scroll-stack-card {
     width: 90%;
     min-height: 16rem;
     padding: 1.5rem;
-    margin: 15px 0;
-    transform: none !important;
-    filter: none !important;
+    margin: 20px 0;
   }
 
   .scroll-stack-inner {
-    padding: 3vh 1rem 3vh;
+    padding: 5vh 1rem 30rem;
   }
 
   .scroll-stack-card h2 {

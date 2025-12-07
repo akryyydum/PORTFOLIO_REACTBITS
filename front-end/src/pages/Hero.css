@@ -81,6 +81,15 @@
   transform: translateX(5px);
 }
 
+.spotify-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeInUpCenter 1s ease-out 2.5s backwards;
+  z-index: 10;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -89,6 +98,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpCenter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
