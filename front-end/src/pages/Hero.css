@@ -81,7 +81,7 @@
   transform: translateX(5px);
 }
 
-.spotify-container {
+.hero-section .spotify-container {
   position: fixed;
   bottom: 2rem;
   left: 50%;

@@ -28,11 +28,6 @@ export default class About extends Component {
                 beautiful and functional digital experiences. With expertise in modern web 
                 technologies, I bring ideas to life through clean code and innovative design.
               </p>
-              <p>
-                I love exploring new technologies and continuously improving my skills. 
-                When I'm not coding, you can find me learning about the latest trends in 
-                web development and UI/UX design.
-              </p>
             </div>
           </div>
           <div className="about-right">
