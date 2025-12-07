@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 export default function Navbar() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
-    <div className="button-container">
+    <div className={`button-container ${isCollapsed ? 'collapsed' : ''}`}>
       {/* Profile */}
-      <button className="button">
+      <button className={`button ${isCollapsed ? 'hidden' : ''}`}>
         <svg
           className="icon"
           stroke="currentColor"
@@ -23,7 +29,7 @@ export default function Navbar() {
       </button>
       
       {/* About Me */}
-      <button className="button">
+      <button className={`button ${isCollapsed ? 'hidden' : ''}`}>
         <svg
           className="icon"
           stroke="currentColor"
@@ -41,12 +47,12 @@ export default function Navbar() {
       </button>
       
       {/* Logo */}
-      <button className="button logo-button">
+      <button className="button logo-button" onClick={toggleCollapse}>
         AkryArt
       </button>
 
       {/* Projects */}
-      <button className="button">
+      <button className={`button ${isCollapsed ? 'hidden' : ''}`}>
         <svg
           className="icon"
           stroke="currentColor"
@@ -64,7 +70,7 @@ export default function Navbar() {
       </button>
 
       {/* Contact */}
-      <button className="button">
+      <button className={`button ${isCollapsed ? 'hidden' : ''}`}>
         <svg
           className="icon"
           stroke="currentColor"

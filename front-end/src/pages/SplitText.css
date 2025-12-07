@@ -1,0 +1,24 @@
+.split-parent {
+  color: #fff;
+  font-size: 15rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.split-char,
+.split-word,
+.split-line {
+  display: inline-block;
+}
+
+.text-2xl {
+  font-size: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
