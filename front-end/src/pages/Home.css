@@ -1,0 +1,127 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #000;
+}
+
+/* Navigation Arrows */
+.scroll-arrow {
+  position: fixed;
+  bottom: 2rem;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-arrow:active {
+  transform: scale(0.95);
+}
+
+.scroll-arrow svg {
+  width: 28px;
+  height: 28px;
+}
+
+.left-arrow {
+  left: 2rem;
+}
+
+.right-arrow {
+  right: 2rem;
+}
+
+/* Horizontal Scroll */
+.horizontal-scroll-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  height: 100vh;
+  width: max-content;
+}
+
+.scroll-section {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Custom horizontal scrollbar */
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Disable vertical scrolling on body */
+body {
+  overflow: hidden;
+}
+
+/* Responsive - switch to vertical on mobile */
+@media (max-width: 768px) {
+  .horizontal-scroll-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  .horizontal-scroll-container {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+  }
+
+  .scroll-section {
+    scroll-snap-align: start;
+  }
+
+  body {
+    overflow: auto;
+  }
+}

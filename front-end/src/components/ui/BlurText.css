@@ -1,0 +1,11 @@
+p {
+  color: white !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.inline-block {
+  display: inline-block;
+  color: white;
+}
