@@ -98,13 +98,35 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Disable vertical scrolling on body */
+/* Desktop: lock body vertical scroll so only horizontal paging works */
 body {
   overflow: hidden;
 }
 
 /* Responsive - keep horizontal scroll on mobile */
 @media (max-width: 768px) {
+  /* Allow vertical scrolling inside each section on mobile */
+  .horizontal-scroll-wrapper {
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .horizontal-scroll-container {
+    height: 100vh;
+  }
+
+  .scroll-section {
+    height: 100vh;
+    display: block;
+    overflow-y: auto;
+  }
+
+  /* Re-enable body vertical scroll so mobile can scroll content */
+  body {
+    overflow-y: auto;
+  }
+
   .scroll-arrow {
     width: 50px;
     height: 50px;
@@ -144,4 +166,15 @@ body {
   .right-arrow {
     right: 0.75rem;
   }
+}
+
+.achievements-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: visible;
 }

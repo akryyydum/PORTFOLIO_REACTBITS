@@ -105,14 +105,28 @@
 @media (max-width: 599px) {
   .card-grid {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 0.5em;
+    gap: 1em;
   }
 
   .magic-bento-card {
     width: 100%;
-    min-height: 180px;
+    min-height: 200px;
+    padding: 1em;
+  }
+
+  .magic-bento-card__label {
+    font-size: 14px;
+  }
+
+  .magic-bento-card__title {
+    font-size: 14px;
+  }
+
+  .magic-bento-card__description {
+    font-size: 11px;
   }
 }
 

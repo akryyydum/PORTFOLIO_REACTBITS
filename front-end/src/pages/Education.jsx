@@ -57,7 +57,7 @@ const handleAnimationComplete = () => {
                 <p>2011-2021</p>
               </div>
               <div className="education-logo">
-                <img src="https://via.placeholder.com/120?text=SVS" alt="Saint Vincent School Logo" />
+                <img src="https://i.ibb.co/nsHdPW6n/246000915-104309308714294-2650184785006124055-n-removebg-preview.png" alt="Saint Vincent School Logo" />
               </div>
             </div>
           </ScrollStackItem>
@@ -69,7 +69,7 @@ const handleAnimationComplete = () => {
                 <p>2021-2022</p>
               </div>
               <div className="education-logo">
-                <img src="https://via.placeholder.com/120?text=AdU" alt="Adamson University Logo" />
+                <img src="https://i.ibb.co/wZsxX86Z/327258096-530064095601002-1302641570849325418-n-removebg-preview.png" alt="Adamson University Logo" />
               </div>
             </div>
           </ScrollStackItem>
@@ -77,11 +77,11 @@ const handleAnimationComplete = () => {
             <div className="education-card-content">
               <div className="education-info">
                 <h2>Saint Mary's University</h2>
-                <p>Bachelor of Science in Computer Information Technology</p>
+                <p>Bachelor of Science in Information Technology</p>
                 <p>2022-Present</p>
               </div>
               <div className="education-logo">
-                <img src="https://via.placeholder.com/120?text=SMU" alt="Saint Mary's University Logo" />
+                <img src="https://i.ibb.co/cS74wj3b/207187920-4412100725477161-5409234827718222029-n-removebg-preview.png" alt="Saint Mary's University Logo" />
               </div>
             </div>
           </ScrollStackItem>
